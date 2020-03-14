@@ -4666,7 +4666,7 @@ void create_windowmain()
 	{
 		FILE *in;
 		char s[80];
-		sprintf(s, "language\\%d.lng", i);
+		sprintf(s, "language/%d.lng", i);
 		if ((in = fopen(s, "r")) != NULL)
 		{
 			while (fgets(s, sizeof(s), in))
@@ -5687,7 +5687,7 @@ void load_setting(int def_boardsizeh, int def_boardsizew, int def_language, int 
 	clanguage = (char *)malloc(1024 * sizeof(char*));
 	for (i = 0; i < 1024; i++) clanguage[i] = NULL;
 
-	sprintf(s, "language\\%d.lng", language);
+	sprintf(s, "language/%d.lng", language);
 	if ((in = fopen(s, "r")) != NULL)
 	{
 		while (fgets(s, sizeof(s), in))
